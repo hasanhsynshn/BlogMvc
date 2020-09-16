@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Yazar Onayları";
+}
+@model IEnumerable<BlogH.Models.Kullanici>
+<table>
+
+    @foreach (BlogH.Models.Kullanici item in Model)
+    {
+
+        <tr>
+            <td>@item.Adi @item.Soyadi</td>
+            <td><a href="/Admin/OnayVer/@item.KullaniciId">Onay Ver</a></td>
+        </tr>
+    }
+</table>
+

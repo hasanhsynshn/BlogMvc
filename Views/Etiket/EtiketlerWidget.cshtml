@@ -1,0 +1,15 @@
+﻿@model IEnumerable<BlogH.Models.Etiket>
+
+<div class="sidebox widget">
+    <h3 class="widget-title section-title">Tags</h3>
+    <ul class="tag-list">
+        @foreach (BlogH.Models.Etiket etiket in Model)
+        {
+            <li><a href="/Etiket/Index/@etiket.EtiketId">@etiket.Adi (@etiket.Makale.Count)</a></li>
+
+        }
+
+    </ul>
+    <!-- /.tag-list -->
+
+</div>
